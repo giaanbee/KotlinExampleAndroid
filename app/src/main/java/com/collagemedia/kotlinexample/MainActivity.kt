@@ -12,7 +12,6 @@ import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity(), AnkoLogger {
 
-    val url = "https://avatars0.githubusercontent.com/u/1446536?v=3&s=200"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
