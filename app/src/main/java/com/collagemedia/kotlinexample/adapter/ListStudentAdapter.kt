@@ -42,7 +42,7 @@ open class ListStudentAdapter(context: Context, resource: Int, data: ArrayList<S
 
             retView?.tag = holder
         } else {
-            holder = convertView.tag as ViewHolder
+            holder = convertView!!.tag as ViewHolder
             retView = convertView
         }
         val student = iData[position]
@@ -52,7 +52,7 @@ open class ListStudentAdapter(context: Context, resource: Int, data: ArrayList<S
         return retView!!
     }
 
-    fun ImageView.setImage(url: Int, context: Context) {
+    private fun ImageView.setImage(url: Int, context: Context) {
         Glide.with(context)
                 .load(url)
                 .centerCrop()
