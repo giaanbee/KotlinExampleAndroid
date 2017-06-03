@@ -1,94 +1,63 @@
 package com.collagemedia.kotlinexample
 
-import android.annotation.SuppressLint
 import android.content.res.Resources
 import android.graphics.Rect
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Message
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.TypedValue
 import android.view.View
-import com.bumptech.glide.load.engine.Resource
 import com.collagemedia.kotlinexample.adapter.GridViewAdapter
+import com.collagemedia.kotlinexample.model.StudentModel
 import com.collagemedia.kotlinexample.util.Config
-import com.collagemedia.kotlinexample.util.FileUtil
 import kotlinx.android.synthetic.main.activity_gallery.*
-import java.io.File
-import java.lang.Exception
+import org.jetbrains.anko.AnkoLogger
 
 
 /*
 * Lấy và hiển thị ảnh từ trong 1 folder
 * */
-class GalleryActivity : AppCompatActivity() {
-
-    var lstPhoto: ArrayList<String>? = null
+class GalleryActivity : AppCompatActivity(), AnkoLogger {
+    var lstPhoto: ArrayList<StudentModel>? = null
     val WHAT_GET_ALL_MY_VIDEO_SUCCESS = 100
     val WHAT_GET_ALL_MY_VIDEO_FAILURE = 101
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Config.init(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery)
-
+        initView()
     }
 
-    @SuppressLint("HandlerLeak")
-    val handler: Handler = object : Handler() {
-        override fun handleMessage(msg: Message) {
-            super.handleMessage(msg)
-            when (msg.what) {
-                WHAT_GET_ALL_MY_VIDEO_SUCCESS -> initView()
-                WHAT_GET_ALL_MY_VIDEO_FAILURE -> failLoad()
-            }
-        }
-    }
-
-
-    override fun onStart() {
-        super.onStart()
-        getData()
-    }
-
-    fun getData(): Unit {
-        Thread(Runnable {
-            try {
-                val dir = File(FileUtil.getMyAlbum())
-                if (dir.isDirectory) {
-                    lstPhoto = ArrayList()
-                    var children = dir.list()
-                    for (i in children.indices) {
-                        val childFile = File(dir, children[i])
-                        val path: String = childFile.absolutePath
-                        lstPhoto!!.add(path)
-                    }
-                    if (lstPhoto!!.size > 0) {
-                        handler.sendEmptyMessage(WHAT_GET_ALL_MY_VIDEO_SUCCESS)
-                    } else {
-                        handler.sendEmptyMessage(WHAT_GET_ALL_MY_VIDEO_FAILURE)
-                    }
-                } else {
-                    handler.sendEmptyMessage(WHAT_GET_ALL_MY_VIDEO_FAILURE)
-                }
-
-            } catch (e: Exception) {
-                handler.sendEmptyMessage(WHAT_GET_ALL_MY_VIDEO_FAILURE)
-            }
-        }).start()
+    fun initData(): ArrayList<StudentModel> {
+        val data: ArrayList<StudentModel> = ArrayList()
+        data.add(StudentModel(1, R.mipmap.avatar1, "John", "26/08/1992"))
+        data.add(StudentModel(2, R.mipmap.avatar2, "Dept", "01/01/1994"))
+        data.add(StudentModel(3, R.mipmap.avatar3, "Jana", "09/03/1992"))
+        data.add(StudentModel(4, R.mipmap.avatar4, "Temo", "15/05/1991"))
+        data.add(StudentModel(5, R.mipmap.avatar5, "Catilyn", "09/12/1997"))
+        data.add(StudentModel(6, R.mipmap.avatar6, "Garen", "21/04/1990"))
+        data.add(StudentModel(7, R.mipmap.avatar7, "Yasuo", "16/01/1987"))
+        data.add(StudentModel(8, R.mipmap.avatar8, "Mundo", "30/12/1988"))
+        data.add(StudentModel(9, R.mipmap.avatar9, "John", "26/08/1992"))
+        data.add(StudentModel(10, R.mipmap.avatar10, "Dept", "01/01/1994"))
+        data.add(StudentModel(11, R.mipmap.avatar11, "Jana", "09/03/1992"))
+        data.add(StudentModel(12, R.mipmap.avatar12, "Temo", "15/05/1991"))
+        return data
     }
 
     fun initView(): Unit {
-        val col = 1
-        val pH = Config.SCREENWIDTH - (dpToPx(5) * 2);
 
+        lstPhoto = initData()
+        val col = 3
+        val pH = Config.SCREENWIDTH / col - (dpToPx(5) * 2);
         var layoutManager: RecyclerView.LayoutManager = GridLayoutManager(this, col)
         rcGallery.layoutManager = layoutManager
         rcGallery.addItemDecoration(GridSpacingItemDecoration(col, dpToPx(5), true))
         rcGallery.itemAnimator = DefaultItemAnimator()
-        rcGallery.adapter = GridViewAdapter(this, lstPhoto!!)
+        rcGallery.adapter = GridViewAdapter(this, lstPhoto!!, pH)
     }
 
     fun failLoad(): Unit {

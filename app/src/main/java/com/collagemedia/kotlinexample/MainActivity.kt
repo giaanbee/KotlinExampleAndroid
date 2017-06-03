@@ -8,8 +8,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
-import java.util.*
-import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity(), AnkoLogger {
 
@@ -36,55 +34,20 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         }
     }
 
-    fun randomUrl(array: ArrayList<String>): String {
-        val random: Random = Random()
-        val pos = random.nextInt(array.size)
-        return array[pos]
-    }
-
-    fun initUrl(): ArrayList<String> {
-        val data: ArrayList<String> = ArrayList()
-        data.add("https://raw.githubusercontent.com/twitter/twemoji/gh-pages/72x72/1f3b2.png")
-        data.add("https://raw.githubusercontent.com/twitter/twemoji/gh-pages/72x72/1f3bb.png")
-        data.add("https://raw.githubusercontent.com/twitter/twemoji/gh-pages/72x72/1f3e0.png")
-        return data
-    }
-
     fun initData(): ArrayList<StudentModel> {
         val data: ArrayList<StudentModel> = ArrayList()
-        data.add(StudentModel(1, randomUrl(initUrl()), "John", "26/08/1992"))
-        data.add(StudentModel(2, randomUrl(initUrl()), "Dept", "01/01/1994"))
-        data.add(StudentModel(3, randomUrl(initUrl()), "Jana", "09/03/1992"))
-        data.add(StudentModel(4, randomUrl(initUrl()), "Temo", "15/05/1991"))
-        data.add(StudentModel(5, randomUrl(initUrl()), "Catilyn", "09/12/1997"))
-        data.add(StudentModel(6, randomUrl(initUrl()), "Garen", "21/04/1990"))
-        data.add(StudentModel(7, randomUrl(initUrl()), "Yasuo", "16/01/1987"))
-        data.add(StudentModel(8, randomUrl(initUrl()), "Mundo", "30/12/1988"))
-        data.add(StudentModel(9, randomUrl(initUrl()), "John", "26/08/1992"))
-        data.add(StudentModel(10, randomUrl(initUrl()), "Dept", "01/01/1994"))
-        data.add(StudentModel(11, randomUrl(initUrl()), "Jana", "09/03/1992"))
-        data.add(StudentModel(12, randomUrl(initUrl()), "Temo", "15/05/1991"))
-        data.add(StudentModel(13, randomUrl(initUrl()), "Catilyn", "09/12/1997"))
-        data.add(StudentModel(14, randomUrl(initUrl()), "Garen", "21/04/1990"))
-        data.add(StudentModel(15, randomUrl(initUrl()), "Yasuo", "16/01/1987"))
-        data.add(StudentModel(16, randomUrl(initUrl()), "Mundo", "30/12/1988"))
-
-        data.add(StudentModel(17, randomUrl(initUrl()), "John", "26/08/1992"))
-        data.add(StudentModel(18, randomUrl(initUrl()), "Dept", "01/01/1994"))
-        data.add(StudentModel(19, randomUrl(initUrl()), "Jana", "09/03/1992"))
-        data.add(StudentModel(20, randomUrl(initUrl()), "Temo", "15/05/1991"))
-        data.add(StudentModel(21, randomUrl(initUrl()), "Catilyn", "09/12/1997"))
-        data.add(StudentModel(22, randomUrl(initUrl()), "Garen", "21/04/1990"))
-        data.add(StudentModel(23, randomUrl(initUrl()), "Yasuo", "16/01/1987"))
-        data.add(StudentModel(24, randomUrl(initUrl()), "Mundo", "30/12/1988"))
-        data.add(StudentModel(25, randomUrl(initUrl()), "John", "26/08/1992"))
-        data.add(StudentModel(26, randomUrl(initUrl()), "Dept", "01/01/1994"))
-        data.add(StudentModel(27, randomUrl(initUrl()), "Jana", "09/03/1992"))
-        data.add(StudentModel(28, randomUrl(initUrl()), "Temo", "15/05/1991"))
-        data.add(StudentModel(29, randomUrl(initUrl()), "Catilyn", "09/12/1997"))
-        data.add(StudentModel(30, randomUrl(initUrl()), "Garen", "21/04/1990"))
-        data.add(StudentModel(31, randomUrl(initUrl()), "Yasuo", "16/01/1987"))
-        data.add(StudentModel(32, randomUrl(initUrl()), "Mundo", "30/12/1988"))
+        data.add(StudentModel(1, R.mipmap.avatar1, "John", "26/08/1992"))
+        data.add(StudentModel(2, R.mipmap.avatar2, "Dept", "01/01/1994"))
+        data.add(StudentModel(3, R.mipmap.avatar3, "Jana", "09/03/1992"))
+        data.add(StudentModel(4, R.mipmap.avatar4, "Temo", "15/05/1991"))
+        data.add(StudentModel(5, R.mipmap.avatar5, "Catilyn", "09/12/1997"))
+        data.add(StudentModel(6, R.mipmap.avatar6, "Garen", "21/04/1990"))
+        data.add(StudentModel(7, R.mipmap.avatar7, "Yasuo", "16/01/1987"))
+        data.add(StudentModel(8, R.mipmap.avatar8, "Mundo", "30/12/1988"))
+        data.add(StudentModel(9, R.mipmap.avatar9, "John", "26/08/1992"))
+        data.add(StudentModel(10, R.mipmap.avatar10, "Dept", "01/01/1994"))
+        data.add(StudentModel(11, R.mipmap.avatar11, "Jana", "09/03/1992"))
+        data.add(StudentModel(12, R.mipmap.avatar12, "Temo", "15/05/1991"))
         return data
     }
 }

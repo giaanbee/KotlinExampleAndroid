@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.collagemedia.kotlinexample.model.StudentModel
 import kotlinx.android.synthetic.main.student_item_layout.view.*
+import java.util.*
 
 /*
  * Created by Gia An Bee on 6/2/2017.
@@ -47,14 +48,15 @@ open class ListStudentAdapter(context: Context, resource: Int, data: ArrayList<S
         val student = iData[position]
         holder.tvName?.text = student.name
         holder.tvBirthday?.text = student.birthday
-        holder.imgAvatar?.setImage(student.url, context)
+        holder.imgAvatar?.setImage(student.image, context)
         return retView!!
     }
 
-    fun ImageView.setImage(url: String, context: Context) {
+    fun ImageView.setImage(url: Int, context: Context) {
         Glide.with(context)
                 .load(url)
-                .centerCrop().diskCacheStrategy(DiskCacheStrategy.ALL)
+                .centerCrop()
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(this)
     }
 
