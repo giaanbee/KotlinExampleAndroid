@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">KotlinExample</string>
-    <string name="name_list">Gallery</string>
+    <string name="name_list">Kotlin - LisView</string>
+    <string name="name_grid">Kotlin - GridView</string>
 </resources>

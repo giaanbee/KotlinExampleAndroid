@@ -10,7 +10,7 @@ import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.collagemedia.kotlinexample.model.StudentModel
-import kotlinx.android.synthetic.main.student_item_layout.view.*
+import kotlinx.android.synthetic.main.item_listview.view.*
 import java.util.*
 
 /*
