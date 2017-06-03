@@ -1,17 +1,35 @@
 package com.collagemedia.kotlinexample
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.view.ViewPager
+import android.support.v7.app.AppCompatActivity
 import com.collagemedia.kotlinexample.adapter.ViewPagerAdapter
 import com.collagemedia.kotlinexample.util.Config
 import kotlinx.android.synthetic.main.activity_view_pager.*
+import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.error
+import org.jetbrains.anko.info
+import org.jetbrains.anko.support.v4.onPageChangeListener
 
-class ViewPagerActivity : AppCompatActivity() {
+class ViewPagerActivity : AppCompatActivity(), AnkoLogger {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_pager)
 
-        viewPager.adapter = ViewPagerAdapter(this, R.layout.item_pager, Config.initData())
+        val adapterViewpager = ViewPagerAdapter(this, R.layout.item_pager, Config.initData())
+        viewPager.adapter = adapterViewpager
+
+        changeTextCountPager(1, adapterViewpager.count)
+        viewPager.onPageChangeListener {
+            onPageSelected {
+                error { "Page Changing" }
+                changeTextCountPager(viewPager.currentItem, adapterViewpager.count)
+            }
+        }
+    }
+
+    fun changeTextCountPager(pos: Int, count: Int) {
+        tvCountPager.text = String.format("%2d / %2d", pos, count)
     }
 }

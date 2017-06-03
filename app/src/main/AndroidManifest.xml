@@ -28,7 +28,9 @@
         <activity
             android:name=".GridViewActivity"
             android:label="@string/name_grid" />
-        <activity android:name=".ViewPagerActivity"></activity>
+        <activity
+            android:name=".ViewPagerActivity"
+            android:label="@string/name_viewPager" />
     </application>
 
 </manifest>
