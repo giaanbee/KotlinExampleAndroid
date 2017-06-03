@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         lstStudent.add(StudentModel(510111, radomUrl(initUrl()), "Yasuo", "16/01/1987"))
         lstStudent.add(StudentModel(510111, radomUrl(initUrl()), "Mundo", "30/12/1988"))
 
-        lvMain.adapter = ListStudentAdapter(this, lstStudent)
+        lvMain.adapter = ListStudentAdapter(this, R.layout.student_item_layout, lstStudent)
         lvMain.setOnItemClickListener { parent, view, position, id ->
             toast(lstStudent[position].name)
         }
@@ -54,8 +54,8 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         return array[pos]
     }
 
-    fun initUrl() : ArrayList<String>{
-        val datas : ArrayList<String> = ArrayList()
+    fun initUrl(): ArrayList<String> {
+        val datas: ArrayList<String> = ArrayList()
         datas.add("https://raw.githubusercontent.com/twitter/twemoji/gh-pages/72x72/1f3b2.png")
         datas.add("https://raw.githubusercontent.com/twitter/twemoji/gh-pages/72x72/1f3bb.png")
         datas.add("https://raw.githubusercontent.com/twitter/twemoji/gh-pages/72x72/1f3e0.png")
