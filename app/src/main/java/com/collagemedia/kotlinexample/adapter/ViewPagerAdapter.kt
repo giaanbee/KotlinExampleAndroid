@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.collagemedia.kotlinexample.model.StudentModel
@@ -28,7 +27,6 @@ class ViewPagerAdapter(context: Context, resource: Int, data: ArrayList<StudentM
         this.iResource = resource
         this.iInflate = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
     }
-
 
     override fun isViewFromObject(p0: View?, p1: Any): Boolean {
         return p0 == p1

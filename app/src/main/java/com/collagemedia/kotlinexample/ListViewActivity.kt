@@ -7,6 +7,7 @@ import com.collagemedia.kotlinexample.model.StudentModel
 import com.collagemedia.kotlinexample.util.Config
 import kotlinx.android.synthetic.main.activity_listview.*
 import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
 
 class ListViewActivity : AppCompatActivity(), AnkoLogger {
@@ -19,12 +20,7 @@ class ListViewActivity : AppCompatActivity(), AnkoLogger {
 
         lvMain.adapter = ListViewAdapter(this, R.layout.item_listview, lstStudent)
         lvMain.setOnItemClickListener { parent, view, position, id ->
-            toast(lstStudent[position].name)
-        }
-
-        lvMain.setOnItemLongClickListener { parent, view, position, id ->
-            toast(lstStudent[position].birthday)
-            false
+            startActivity(intentFor<ViewPagerActivity>("pos" to position))
         }
     }
 }

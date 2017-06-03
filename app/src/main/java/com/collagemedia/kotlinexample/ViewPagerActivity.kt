@@ -27,9 +27,16 @@ class ViewPagerActivity : AppCompatActivity(), AnkoLogger {
                 changeTextCountPager(viewPager.currentItem, adapterViewpager.count)
             }
         }
+
+        val intent = intent
+        if (intent != null) {
+            val pos = intent.getIntExtra("pos", 0)
+            changeTextCountPager(pos, adapterViewpager.count)
+            viewPager.currentItem = pos
+        }
     }
 
     fun changeTextCountPager(pos: Int, count: Int) {
-        tvCountPager.text = String.format("%2d / %2d", pos, count)
+        tvCountPager.text = String.format("%2d / %2d", pos + 1, count)
     }
 }
