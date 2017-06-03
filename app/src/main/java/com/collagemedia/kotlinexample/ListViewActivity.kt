@@ -2,7 +2,7 @@ package com.collagemedia.kotlinexample
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.collagemedia.kotlinexample.adapter.ListStudentAdapter
+import com.collagemedia.kotlinexample.adapter.ListViewAdapter
 import com.collagemedia.kotlinexample.model.StudentModel
 import com.collagemedia.kotlinexample.util.Config
 import kotlinx.android.synthetic.main.activity_listview.*
@@ -17,7 +17,7 @@ class ListViewActivity : AppCompatActivity(), AnkoLogger {
 
         val lstStudent: ArrayList<StudentModel> = Config.initData()
 
-        lvMain.adapter = ListStudentAdapter(this, R.layout.item_listview, lstStudent)
+        lvMain.adapter = ListViewAdapter(this, R.layout.item_listview, lstStudent)
         lvMain.setOnItemClickListener { parent, view, position, id ->
             toast(lstStudent[position].name)
         }

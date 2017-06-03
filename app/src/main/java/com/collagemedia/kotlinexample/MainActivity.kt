@@ -18,5 +18,9 @@ class MainActivity : AppCompatActivity() {
         tvGrid.setOnClickListener {
             startActivity(intentFor<GridViewActivity>())
         }
+
+        tvViewPager.setOnClickListener {
+            startActivity(intentFor<ViewPagerActivity>())
+        }
     }
 }
