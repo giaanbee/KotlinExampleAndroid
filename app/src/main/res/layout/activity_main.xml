@@ -5,12 +5,12 @@
     android:layout_height="match_parent"
     tools:context="com.collagemedia.kotlinexample.MainActivity">
 
-    <TextView
+    <Button
         android:id="@+id/tvMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Hello World!" />
+        android:text="" />
 
     <ListView
         android:id="@+id/lvMain"

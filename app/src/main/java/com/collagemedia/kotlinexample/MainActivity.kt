@@ -6,6 +6,7 @@ import com.collagemedia.kotlinexample.adapter.ListStudentAdapter
 import com.collagemedia.kotlinexample.model.StudentModel
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
 import java.util.*
 import kotlin.collections.ArrayList
@@ -18,6 +19,9 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
 
         val name: String = getString(R.string.name_list)
         tvMain.text = name
+        tvMain.setOnClickListener {
+            startActivity(intentFor<GalleryActivity>())
+        }
 
         val lstStudent: ArrayList<StudentModel> = initData()
 

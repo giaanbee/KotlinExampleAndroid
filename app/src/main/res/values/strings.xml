@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">KotlinExample</string>
-
-    <string name="name_list">List Student</string>
+    <string name="name_list">Gallery</string>
 </resources>
