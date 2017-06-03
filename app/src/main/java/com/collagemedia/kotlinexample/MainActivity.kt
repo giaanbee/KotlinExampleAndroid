@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         val name: String = getString(R.string.name_list)
         tvMain.text = name
 
-        val lstStudent: ArrayList<StudentModel> = ArrayList()
+        val lstStudent: ArrayList<StudentModel> = initDatas()
         lstStudent.add(StudentModel(510111, radomUrl(initUrl()), "John", "26/08/1992"))
         lstStudent.add(StudentModel(510111, radomUrl(initUrl()), "Dept", "01/01/1994"))
         lstStudent.add(StudentModel(510111, radomUrl(initUrl()), "Jana", "09/03/1992"))
@@ -55,10 +55,48 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
     }
 
     fun initUrl(): ArrayList<String> {
-        val datas: ArrayList<String> = ArrayList()
-        datas.add("https://raw.githubusercontent.com/twitter/twemoji/gh-pages/72x72/1f3b2.png")
-        datas.add("https://raw.githubusercontent.com/twitter/twemoji/gh-pages/72x72/1f3bb.png")
-        datas.add("https://raw.githubusercontent.com/twitter/twemoji/gh-pages/72x72/1f3e0.png")
+        val data: ArrayList<String> = ArrayList()
+        data.add("https://raw.githubusercontent.com/twitter/twemoji/gh-pages/72x72/1f3b2.png")
+        data.add("https://raw.githubusercontent.com/twitter/twemoji/gh-pages/72x72/1f3bb.png")
+        data.add("https://raw.githubusercontent.com/twitter/twemoji/gh-pages/72x72/1f3e0.png")
+        return data
+    }
+
+    fun initDatas(): ArrayList<StudentModel> {
+        val datas: ArrayList<StudentModel> = ArrayList()
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "John", "26/08/1992"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Dept", "01/01/1994"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Jana", "09/03/1992"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Temo", "15/05/1991"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Catilyn", "09/12/1997"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Garen", "21/04/1990"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Yasuo", "16/01/1987"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Mundo", "30/12/1988"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "John", "26/08/1992"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Dept", "01/01/1994"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Jana", "09/03/1992"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Temo", "15/05/1991"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Catilyn", "09/12/1997"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Garen", "21/04/1990"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Yasuo", "16/01/1987"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Mundo", "30/12/1988"))
+
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "John", "26/08/1992"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Dept", "01/01/1994"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Jana", "09/03/1992"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Temo", "15/05/1991"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Catilyn", "09/12/1997"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Garen", "21/04/1990"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Yasuo", "16/01/1987"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Mundo", "30/12/1988"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "John", "26/08/1992"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Dept", "01/01/1994"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Jana", "09/03/1992"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Temo", "15/05/1991"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Catilyn", "09/12/1997"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Garen", "21/04/1990"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Yasuo", "16/01/1987"))
+        datas.add(StudentModel(510111, radomUrl(initUrl()), "Mundo", "30/12/1988"))
         return datas
     }
 }
