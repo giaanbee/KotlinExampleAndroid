@@ -21,6 +21,7 @@ open class ListStudentAdapter(context: Context, resource: Int, data: ArrayList<S
     var iData: ArrayList<StudentModel>
     var iInflate: LayoutInflater
 
+
     init {
         this.iResource = resource
         this.iData = data
