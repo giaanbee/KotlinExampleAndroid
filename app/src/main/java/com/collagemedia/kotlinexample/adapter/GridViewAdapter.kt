@@ -19,9 +19,9 @@ import org.jetbrains.anko.intentFor
  * Created by Gia An Bee on 6/3/2017.
  */
 class GridViewAdapter(context: Context, data: ArrayList<StudentModel>, pH: Int) : RecyclerView.Adapter<GridViewAdapter.ViewHolderGridView>() {
-    var data: ArrayList<StudentModel>? = null
-    var context: Context? = null
-    var pH: Int? = null
+    var data: ArrayList<StudentModel>
+    var context: Context
+    var pH: Int
 
     init {
         this.data = data
@@ -44,24 +44,24 @@ class GridViewAdapter(context: Context, data: ArrayList<StudentModel>, pH: Int) 
         return ViewHolderGridView(view)
     }
 
-    override fun onBindViewHolder(holder: ViewHolderGridView?, position: Int) {
-        val path = data!![position].image;
+    override fun onBindViewHolder(holder: ViewHolderGridView, position: Int) {
+        val path = data[position].image;
 
-        holder?.covervideo?.layoutParams?.height = pH!!;
-        holder?.covervideo?.layoutParams?.height = pH!!;
-        Glide.with(context!!)
+        holder.covervideo.layoutParams?.height = pH;
+        holder.covervideo.layoutParams?.height = pH;
+        Glide.with(context)
                 .load(path)
                 .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .into(holder?.imgAvatar)
-        holder?.covervideo?.setOnClickListener {
-            context!!.startActivity(context!!.intentFor<ViewPagerActivity>("pos" to position))
+                .into(holder.imgAvatar)
+        holder.covervideo.setOnClickListener {
+            context.startActivity(context.intentFor<ViewPagerActivity>("pos" to position))
         }
 
     }
 
     override fun getItemCount(): Int {
-        return data!!.size
+        return data.size
     }
 
 }

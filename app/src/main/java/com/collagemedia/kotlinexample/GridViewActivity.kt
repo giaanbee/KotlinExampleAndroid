@@ -35,7 +35,7 @@ class GridViewActivity : AppCompatActivity(), AnkoLogger {
 
         lstPhoto = Config.initData()
         val col = 3
-        val pH = Config.SCREENWIDTH / col - (dpToPx(5) * 2);
+        val pH = Config.SCREENWIDTH / col - (dpToPx(2) * 1);
         var layoutManager: RecyclerView.LayoutManager = GridLayoutManager(this, col) as RecyclerView.LayoutManager
         rcGallery.layoutManager = layoutManager
         rcGallery.addItemDecoration(GridSpacingItemDecoration(col, dpToPx(5), true))
