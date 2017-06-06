@@ -3,4 +3,5 @@
     <string name="name_list">Kotlin - LisView</string>
     <string name="name_grid">Kotlin - GridView</string>
     <string name="name_viewPager">Kotlin - ViewPager</string>
+    <string name="name_sqlite">Kotlin - SQLite List from DB</string>
 </resources>
