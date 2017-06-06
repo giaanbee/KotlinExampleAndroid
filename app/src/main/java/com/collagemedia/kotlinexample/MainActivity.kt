@@ -31,6 +31,10 @@ class MainActivity : AppCompatActivity() {
                 showToast()
             }
         }
+
+        tvDataOpenSQLite.setOnClickListener {
+            startActivity(intentFor<DataSQLiteActivity>())
+        }
     }
 
     internal fun supportsLollipop(code: () -> Unit) {

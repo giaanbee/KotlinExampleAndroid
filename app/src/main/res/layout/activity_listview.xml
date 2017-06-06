@@ -9,7 +9,6 @@
     <ListView
         android:id="@+id/lvMain"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/tvMain" />
+        android:layout_height="match_parent" />
 
 </RelativeLayout>

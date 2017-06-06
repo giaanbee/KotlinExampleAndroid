@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KotlinExample</string>
+    <string name="app_name">0 KotlinExample</string>
     <string name="name_list">Kotlin - LisView</string>
     <string name="name_grid">Kotlin - GridView</string>
     <string name="name_viewPager">Kotlin - ViewPager</string>
