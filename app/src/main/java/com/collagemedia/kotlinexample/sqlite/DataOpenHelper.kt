@@ -7,6 +7,7 @@ import com.collagemedia.kotlinexample.App
 import com.collagemedia.kotlinexample.model.StudentModel
 import org.jetbrains.anko.db.*
 
+
 /*
  * Created by Gia An Bee on 6/6/2017.
  */
@@ -58,7 +59,7 @@ class DataOpenHelper(ctx: Context = App.instance()) : ManagedSQLiteOpenHelper(ct
         db.insert(TABLE_NAME, null, values)
     }
 
-    fun getData(id: Int): StudentModel {
+    fun getItem(id: Int): StudentModel {
         val db = this.readableDatabase
         val cursor = db.query(TABLE_NAME,
                 arrayOf<String>(ID, NAME, BIRTHDAY, IMAGE), ID + "=?",
@@ -66,12 +67,12 @@ class DataOpenHelper(ctx: Context = App.instance()) : ManagedSQLiteOpenHelper(ct
 
         cursor.moveToFirst()
 
-        val contact = StudentModel(Integer.parseInt(cursor.getString(0)),
+        val item = StudentModel(Integer.parseInt(cursor.getString(0)),
                 Integer.parseInt(cursor.getString(3)),
                 cursor.getString(1), cursor.getString(2))
 
         cursor.close()
-        return contact
+        return item
     }
 
     fun getCount(): Int {
@@ -90,17 +91,36 @@ class DataOpenHelper(ctx: Context = App.instance()) : ManagedSQLiteOpenHelper(ct
         val cursor = db.rawQuery(selectQuery, null)
         if (cursor.moveToFirst()) {
             do {
-                val contact = StudentModel()
-                contact.id = Integer.parseInt(cursor.getString(0))
-                contact.name = cursor.getString(1)
-                contact.birthday = cursor.getString(2)
-                contact.image = Integer.parseInt(cursor.getString(3))
+                val item = StudentModel()
+                item.id = Integer.parseInt(cursor.getString(0))
+                item.name = cursor.getString(1)
+                item.birthday = cursor.getString(2)
+                item.image = Integer.parseInt(cursor.getString(3))
                 // Adding contact to list
-                contactList.add(contact)
+                contactList.add(item)
             } while (cursor.moveToNext())
         }
         cursor.close()
         return contactList
+    }
+
+    fun updateItem(item: StudentModel): Int {
+        val db = this.writableDatabase
+
+        val values = ContentValues()
+        values.put(NAME, item.name)
+        values.put(BIRTHDAY, item.birthday)
+        values.put(IMAGE, item.image)
+        // updating row
+        return db.update(TABLE_NAME, values, ID + " = ?",
+                arrayOf<String>(item.id.toString()))
+    }
+
+    fun deleteItem(item: StudentModel) {
+        val db = this.writableDatabase
+        db.delete(TABLE_NAME, ID + " = ?",
+                arrayOf<String>(item.id.toString()))
+        db.close()
     }
     /*
     * Dùng theo Kotlin
