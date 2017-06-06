@@ -1,9 +1,12 @@
 package com.collagemedia.kotlinexample
 
+import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.intentFor
+import org.jetbrains.anko.toast
+import kotlin.properties.Delegates
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,5 +25,21 @@ class MainActivity : AppCompatActivity() {
         tvViewPager.setOnClickListener {
             startActivity(intentFor<ViewPagerActivity>())
         }
+
+        tvLambdas.setOnClickListener {
+            supportsLollipop {
+                showToast()
+            }
+        }
+    }
+
+    internal fun supportsLollipop(code: () -> Unit) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            code()
+        }
+    }
+
+    fun showToast() {
+        toast("Test Xem nào")
     }
 }

@@ -28,5 +28,12 @@
         android:gravity="center"
         android:text="View Pager" />
 
+    <Button
+        android:id="@+id/tvLambdas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Lambdas ( fun in fun)" />
+
 
 </LinearLayout>
