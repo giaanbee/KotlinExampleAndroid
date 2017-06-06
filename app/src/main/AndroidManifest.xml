@@ -31,7 +31,9 @@
         <activity
             android:name=".ViewPagerActivity"
             android:label="@string/name_viewPager" />
-        <activity android:name=".DataSQLiteActivity"></activity>
+        <activity
+            android:name=".DataSQLiteActivity"
+            android:label="@string/name_sqlite" />
     </application>
 
 </manifest>
