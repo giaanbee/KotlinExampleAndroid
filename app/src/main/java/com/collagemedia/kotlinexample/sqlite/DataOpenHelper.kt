@@ -44,6 +44,10 @@ class DataOpenHelper(ctx: Context = App.instance()) : ManagedSQLiteOpenHelper(ct
         )
     }
 
+    /*
+    * Dùng theo câu lệnh SQL
+    *
+    * */
     fun addData(data: StudentModel) {
         val db = this.writableDatabase
         val values = ContentValues()
@@ -98,6 +102,10 @@ class DataOpenHelper(ctx: Context = App.instance()) : ManagedSQLiteOpenHelper(ct
         cursor.close()
         return contactList
     }
+    /*
+    * Dùng theo Kotlin
+    *
+    * */
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.dropTable(TABLE_NAME, true)
