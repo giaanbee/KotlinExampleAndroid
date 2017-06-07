@@ -6,7 +6,6 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
-import kotlin.properties.Delegates
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,6 +33,10 @@ class MainActivity : AppCompatActivity() {
 
         tvDataOpenSQLite.setOnClickListener {
             startActivity(intentFor<DataSQLiteActivity>())
+        }
+
+        tvAnkoLayout.setOnClickListener {
+            startActivity(intentFor<AnkoLayoutActivity>())
         }
     }
 

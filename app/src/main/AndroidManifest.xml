@@ -34,6 +34,9 @@
         <activity
             android:name=".DataSQLiteActivity"
             android:label="@string/name_sqlite" />
+        <activity
+            android:name=".AnkoLayoutActivity"
+            android:label="@string/name_anko_layout" />
     </application>
 
 </manifest>

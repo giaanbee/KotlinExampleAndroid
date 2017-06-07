@@ -10,6 +10,8 @@ import com.collagemedia.kotlinexample.util.Config
 import kotlinx.android.synthetic.main.activity_data_sqlite.*
 import kotlinx.coroutines.experimental.Deferred
 import org.jetbrains.anko.*
+import org.jetbrains.anko.coroutines.experimental.Ref
+import org.jetbrains.anko.coroutines.experimental.asReference
 import org.jetbrains.anko.coroutines.experimental.bg
 import org.jetbrains.anko.custom.async
 
@@ -17,7 +19,7 @@ class DataSQLiteActivity : AppCompatActivity(), AnkoLogger {
     var dataSQL: DataOpenHelper? = null
 
     var list: ArrayList<StudentModel> = ArrayList()
-    var progressDialog : ProgressDialog? = null
+    var progressDialog: ProgressDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,11 +31,15 @@ class DataSQLiteActivity : AppCompatActivity(), AnkoLogger {
         progressDialog!!.setTitle("Loading...")
 //        loadData()
 
-        initView()
+//        initView()
+        loadAndShowData()
     }
 
 
-    /*--------Using Anko Coroutines--------*/
+
+    /*--------Using Anko Coroutines --------*/
+
+    //------------bg()---------------
     fun getData(): ArrayList<StudentModel> {
 //        progressDialog!!.show()
         var data: ArrayList<StudentModel> = ArrayList()
@@ -54,8 +60,22 @@ class DataSQLiteActivity : AppCompatActivity(), AnkoLogger {
             }
 
             // UI
-            progressDialog!!.dismiss()
+
             showData(data.await())
+        }
+    }
+    //---------------asReference()------------
+
+    fun loadAndShowData() {
+        progressDialog!!.show()
+        // Ref<T> uses the WeakReference under the hood
+        val ref: Ref<DataSQLiteActivity> = this.asReference()
+
+        kotlinx.coroutines.experimental.async(kotlinx.coroutines.experimental.android.UI) {
+            val data = getData()
+
+            // Use ref() instead of this@MyActivity
+            ref().showData(data)
         }
     }
 
@@ -76,7 +96,7 @@ class DataSQLiteActivity : AppCompatActivity(), AnkoLogger {
     }
 
     private fun showData(data: ArrayList<StudentModel>) {
-//        progressDialog!!.dismiss()
+        progressDialog!!.dismiss()
         lvData.adapter = ListViewAdapter(this, R.layout.item_listview, data)
         lvData.setOnItemClickListener { _, _, position, _ ->
             startActivity(intentFor<ViewPagerActivity>("pos" to position))
