@@ -1,5 +1,6 @@
 package com.collagemedia.kotlinexample
 
+import android.app.ProgressDialog
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.collagemedia.kotlinexample.adapter.ListViewAdapter
@@ -16,13 +17,16 @@ class DataSQLiteActivity : AppCompatActivity(), AnkoLogger {
     var dataSQL: DataOpenHelper? = null
 
     var list: ArrayList<StudentModel> = ArrayList()
+    var progressDialog : ProgressDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_data_sqlite)
 
         dataSQL = DataOpenHelper.getInstance(this)
-
+        progressDialog = ProgressDialog(this)
+        progressDialog!!.setProgressStyle(ProgressDialog.STYLE_SPINNER)
+        progressDialog!!.setTitle("Loading...")
 //        loadData()
 
         initView()
@@ -31,6 +35,7 @@ class DataSQLiteActivity : AppCompatActivity(), AnkoLogger {
 
     /*--------Using Anko Coroutines--------*/
     fun getData(): ArrayList<StudentModel> {
+//        progressDialog!!.show()
         var data: ArrayList<StudentModel> = ArrayList()
         if (dataSQL!!.getCount() == 0) {
             for (item in Config.initData())
@@ -41,13 +46,15 @@ class DataSQLiteActivity : AppCompatActivity(), AnkoLogger {
     }
 
     fun initView() {
+        progressDialog!!.show()
         kotlinx.coroutines.experimental.async(kotlinx.coroutines.experimental.android.UI) {
             val data: Deferred<ArrayList<StudentModel>> = bg {
-                // Cha
+                // Chạy trong background
                 getData()
             }
 
-            // This code is executed on the UI thread
+            // UI
+            progressDialog!!.dismiss()
             showData(data.await())
         }
     }
@@ -69,6 +76,7 @@ class DataSQLiteActivity : AppCompatActivity(), AnkoLogger {
     }
 
     private fun showData(data: ArrayList<StudentModel>) {
+//        progressDialog!!.dismiss()
         lvData.adapter = ListViewAdapter(this, R.layout.item_listview, data)
         lvData.setOnItemClickListener { _, _, position, _ ->
             startActivity(intentFor<ViewPagerActivity>("pos" to position))
