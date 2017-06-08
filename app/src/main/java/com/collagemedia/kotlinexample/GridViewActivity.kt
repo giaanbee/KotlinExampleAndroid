@@ -48,8 +48,8 @@ class GridViewActivity : AppCompatActivity(), AnkoLogger {
     }
 
     fun dpToPx(dp: Int): Int {
-        var r: Resources = resources;
-        var px = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(), r.displayMetrics))
+        val r: Resources = resources;
+        val px = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(), r.displayMetrics))
         return px
     }
 

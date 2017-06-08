@@ -33,6 +33,9 @@ class AnkoLayoutActivity : AppCompatActivity() {
                 }
 
             }
+            imageView {
+                setImageResource(R.mipmap.avatar10)
+            }
         }
     }
 }

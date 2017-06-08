@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="com.collagemedia.kotlinexample.ConstrainLayoutActivity">
+
+    <ImageView
+        android:id="@+id/imgBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/avatar1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Name"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edName"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/edName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Type your name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/imgBanner" />
+
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Password"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edPassword" />
+
+    <EditText
+        android:id="@+id/edPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Type your password"
+        android:inputType="textPassword"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/edName" />
+</android.support.constraint.ConstraintLayout>

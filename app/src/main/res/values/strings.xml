@@ -5,4 +5,5 @@
     <string name="name_viewPager">Kotlin - ViewPager</string>
     <string name="name_sqlite">Kotlin - SQLite List from DB</string>
     <string name="name_anko_layout">Kotlin - Anko Layout</string>
+    <string name="name_constrain_layout">Kotlin - Constrain Layout</string>
 </resources>

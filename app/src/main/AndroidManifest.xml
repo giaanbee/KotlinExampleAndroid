@@ -37,6 +37,9 @@
         <activity
             android:name=".AnkoLayoutActivity"
             android:label="@string/name_anko_layout" />
+        <activity
+            android:name=".ConstrainLayoutActivity"
+            android:label="@string/name_constrain_layout" />
     </application>
 
 </manifest>

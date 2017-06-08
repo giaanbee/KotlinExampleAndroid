@@ -38,6 +38,10 @@ class MainActivity : AppCompatActivity() {
         tvAnkoLayout.setOnClickListener {
             startActivity(intentFor<AnkoLayoutActivity>())
         }
+
+        tvConstrainLayout.setOnClickListener {
+            startActivity(intentFor<ConstrainLayoutActivity>())
+        }
     }
 
     internal fun supportsLollipop(code: () -> Unit) {

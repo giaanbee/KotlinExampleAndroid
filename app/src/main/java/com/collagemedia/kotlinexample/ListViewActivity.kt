@@ -19,7 +19,7 @@ class ListViewActivity : AppCompatActivity(), AnkoLogger {
         val lstStudent: ArrayList<StudentModel> = Config.initData()
 
         lvMain.adapter = ListViewAdapter(this, R.layout.item_listview, lstStudent)
-        lvMain.setOnItemClickListener { parent, view, position, id ->
+        lvMain.setOnItemClickListener { _, _, position, _ ->
             startActivity(intentFor<ViewPagerActivity>("pos" to position))
         }
     }
