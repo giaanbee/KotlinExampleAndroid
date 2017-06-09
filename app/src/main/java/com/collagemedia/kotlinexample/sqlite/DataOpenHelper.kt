@@ -3,7 +3,7 @@ package com.collagemedia.kotlinexample.sqlite
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
-import com.collagemedia.kotlinexample.App
+import com.collagemedia.kotlinexample.base.App
 import com.collagemedia.kotlinexample.model.StudentModel
 import org.jetbrains.anko.db.*
 

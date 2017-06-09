@@ -32,12 +32,7 @@ class RecyclerAndCardViewActivity : BaseAppcombatActivity() {
         recycler_view.itemAnimator = DefaultItemAnimator()
         recycler_view.adapter = adapter
 
-        try {
-            Glide.with(this).load(R.drawable.cover).into(backdrop)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-
+        Glide.with(this).load(R.drawable.cover).into(backdrop)
     }
 
     /**

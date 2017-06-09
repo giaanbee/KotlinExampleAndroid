@@ -8,17 +8,13 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.collagemedia.kotlinexample.R
-import com.collagemedia.kotlinexample.ViewPagerActivity
 import com.collagemedia.kotlinexample.model.StudentModel
 import kotlinx.android.synthetic.main.cardview_layout.view.*
-import kotlinx.android.synthetic.main.item_gridview.view.*
-import org.jetbrains.anko.intentFor
 
 /*
  * Created by Gia An Bee on 6/9/2017.
@@ -85,11 +81,11 @@ class RecyclerCardViewAdapter(context: Context, data: ArrayList<StudentModel>) :
 
         override fun onMenuItemClick(menuItem: MenuItem): Boolean {
             when (menuItem.getItemId()) {
-                R.id.action_add_favourite -> {
+                R.id.action_share -> {
                     Toast.makeText(context, "Add to favourite", Toast.LENGTH_SHORT).show()
                     return true
                 }
-                R.id.action_play_next -> {
+                R.id.action_del -> {
                     Toast.makeText(context, "Play next", Toast.LENGTH_SHORT).show()
                     return true
                 }
