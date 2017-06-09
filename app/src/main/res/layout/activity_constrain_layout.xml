@@ -1,56 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
     tools:context="com.collagemedia.kotlinexample.ConstrainLayoutActivity">
 
-    <ImageView
-        android:id="@+id/imgBanner"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:adjustViewBounds="true"
-        android:src="@mipmap/avatar1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvName"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:text="Name"
-        app:layout_constraintBaseline_toBaselineOf="@+id/edName"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/edName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Type your name"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvName"
-        app:layout_constraintTop_toBottomOf="@+id/imgBanner" />
+            <ImageView
+                android:id="@+id/imgBanner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="0dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/avatar1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvPassword"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:text="Password"
-        app:layout_constraintBaseline_toBaselineOf="@+id/edPassword" />
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="Name"
+                app:layout_constraintBaseline_toBaselineOf="@+id/edName"
+                app:layout_constraintLeft_toLeftOf="parent" />
 
-    <EditText
-        android:id="@+id/edPassword"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Type your password"
-        android:inputType="textPassword"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvName"
-        app:layout_constraintTop_toBottomOf="@+id/edName" />
-</android.support.constraint.ConstraintLayout>
+            <EditText
+                android:id="@+id/edName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Type your name"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvName"
+                app:layout_constraintTop_toBottomOf="@+id/imgBanner" />
+
+            <TextView
+                android:id="@+id/tvPassword"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="Password"
+                app:layout_constraintBaseline_toBaselineOf="@+id/edPassword" />
+
+            <EditText
+                android:id="@+id/edPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Type your password"
+                android:inputType="textPassword"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvName"
+                app:layout_constraintTop_toBottomOf="@+id/edName" />
+
+            <TextView
+                android:id="@+id/tvDes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/des"
+                app:layout_constraintTop_toBottomOf="@id/edPassword" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                app:layout_constraintTop_toBottomOf="@id/tvDes" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDes" />
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+</LinearLayout>

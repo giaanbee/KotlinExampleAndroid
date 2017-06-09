@@ -16,8 +16,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aed3b42a-af5c-4b18-96ea-e8ab7c45ae89" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/ConstrainLayoutActivity.kt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_constrain_layout.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-milestone-1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-milestone-1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-milestone-1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.0-milestone-1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-milestone-1/fileHashes/jvmClassSignatures.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-milestone-1/fileHashes/jvmClassSignatures.bin" />
@@ -27,15 +25,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-milestone-1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-milestone-1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-milestone-1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.0-milestone-1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0-milestone-1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.0-milestone-1/taskHistory/taskHistory.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/AnkoLayoutActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/AnkoLayoutActivity.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/GridViewActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/GridViewActivity.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/ListViewActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/ListViewActivity.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/MainActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/MainActivity.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/ConstrainLayoutActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/ConstrainLayoutActivity.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_constrain_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_constrain_layout.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,26 +55,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ConstrainLayoutActivity.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ConstrainLayoutActivity.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/ConstrainLayoutActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-              <folding />
+            <state relative-caret-position="273">
+              <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+              <folding>
+                <element signature="e#40#210#0" expanded="true" />
+                <marker date="1496970905717" expanded="false" signature="47:112" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_constrain_layout.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="activity_constrain_layout.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_constrain_layout.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
           <provider editor-type-id="android-designer2">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="74" column="41" lean-forward="false" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="41" />
+              <folding>
+                <element signature="e#3045#3058#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="9" column="294" lean-forward="false" selection-start-line="9" selection-start-column="294" selection-end-line="9" selection-end-column="294" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -1982,15 +1989,16 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/DataSQLiteActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_anko_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_constrain_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/ListViewActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/GridViewActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/AnkoLayoutActivity.kt" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_constrain_layout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/ConstrainLayoutActivity.kt" />
       </list>
     </option>
   </component>
@@ -2052,8 +2060,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2076,63 +2083,10 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KotlinExample" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KotlinExample" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kotlinexample" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KotlinExample" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kotlinexample" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sqlite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2207,7 +2161,7 @@
     <property name="android.sdk.path" value="F:/Eclipse/sdk" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="dime&#9;PSI&#9;JAVA://com.collagemedia.kotlinexample.R.dimen&#10;Mani&#9;FILE&#9;file://F:/workspacestudio3/KotlinExample/app/src/main/AndroidManifest.xml&#10;string&#9;FILE&#9;file://F:/workspacestudio3/KotlinExample/app/src/main/res/values/strings.xml&#10;man&#9;FILE&#9;file://F:/workspacestudio3/KotlinExample/app/src/main/AndroidManifest.xml&#10;app&#9;RUN_CONFIGURATION&#9;app&#10;mani&#9;FILE&#9;file://F:/workspacestudio3/KotlinExample/app/src/main/AndroidManifest.xml&#10;color&#9;FILE&#9;file://F:/workspacestudio3/KotlinExample/app/src/main/res/values/colors.xml" />
+    <property name="SearchEverywhereHistoryKey" value="strin&#9;FILE&#9;file://F:/workspacestudio3/KotlinExample/app/src/main/res/values/strings.xml&#10;dime&#9;PSI&#9;JAVA://com.collagemedia.kotlinexample.R.dimen&#10;Mani&#9;FILE&#9;file://F:/workspacestudio3/KotlinExample/app/src/main/AndroidManifest.xml&#10;string&#9;FILE&#9;file://F:/workspacestudio3/KotlinExample/app/src/main/res/values/strings.xml&#10;man&#9;FILE&#9;file://F:/workspacestudio3/KotlinExample/app/src/main/AndroidManifest.xml&#10;app&#9;RUN_CONFIGURATION&#9;app&#10;mani&#9;FILE&#9;file://F:/workspacestudio3/KotlinExample/app/src/main/AndroidManifest.xml&#10;color&#9;FILE&#9;file://F:/workspacestudio3/KotlinExample/app/src/main/res/values/colors.xml" />
     <property name="device.picker.selection" value="03010bea08e49aa6" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
@@ -2385,27 +2339,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2595,10 +2528,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29104477" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29104477" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18398269" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="1175" y="7" width="736" height="986" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18398269" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="1175" y="7" width="736" height="986" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32683983" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2710,13 +2643,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/util/FileUtil.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_listview.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.3.1.aar/e59c600f0a5649816140e9410beafbf4/jars/classes.jar!/android/support/v4/view/PagerAdapter.class">
@@ -2727,23 +2660,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_pager.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_pager.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_view_pager.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-support-v4/0.10.1/84fc0345db37f4eb95fc562912ae0dca631c372d/anko-support-v4-0.10.1-sources.jar!/Listeners.kt">
@@ -2769,32 +2702,29 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_gridview.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_gridview.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_gridview.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/adapter/GridViewAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="920">
           <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="e#48#619#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2804,7 +2734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2812,19 +2741,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_listview.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="11" selection-end-column="47" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-coroutines/0.10.1/f77386ab8515c31eae7b0b596c754c6708541bf3/anko-coroutines-0.10.1-sources.jar!/bg.kt">
@@ -2838,30 +2766,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-512">
           <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_data_sqlite.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_anko_layout.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_anko_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="android-dummy://F:/workspacestudio3/KotlinExample//Theme Editor">
@@ -2881,7 +2808,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21651">
           <caret line="1890" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1890" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2889,7 +2815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2901,17 +2826,9 @@
         <state relative-caret-position="551">
           <caret line="41" column="56" lean-forward="false" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
           <folding>
-            <element signature="e#1590#1616#0" expanded="true" />
+            <element signature="e#1590#1616#0" expanded="false" />
             <marker date="1496892990637" expanded="true" signature="1750:1768" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2924,24 +2841,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
           <caret line="55" column="46" lean-forward="false" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="46" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="42" column="59" lean-forward="false" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="59" />
-          <folding>
-            <element signature="e#40#258#0" expanded="true" />
-            <marker date="1496897036905" expanded="false" signature="71:226" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2949,7 +2862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2957,7 +2869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
           <caret line="51" column="12" lean-forward="false" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2965,9 +2876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
           <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#720#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2983,9 +2891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1302">
           <caret line="77" column="25" lean-forward="false" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
-          <folding>
-            <element signature="e#47#290#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2993,30 +2898,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
           <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="294" lean-forward="false" selection-start-line="9" selection-start-column="294" selection-end-line="9" selection-end-column="294" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_constrain_layout.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="74" column="41" lean-forward="false" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="41" />
           <folding>
-            <element signature="e#40#258#0" expanded="true" />
-            <marker date="1496898053210" expanded="true" signature="1007:1028" ph="{...}" />
+            <element signature="e#3045#3058#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/collagemedia/kotlinexample/ConstrainLayoutActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-          <folding />
+        <state relative-caret-position="273">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="e#40#210#0" expanded="true" />
+            <marker date="1496970905717" expanded="false" signature="47:112" ph="..." />
+          </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_constrain_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
   </component>
