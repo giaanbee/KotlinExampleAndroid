@@ -59,5 +59,12 @@
             android:gravity="center"
             android:text="Constrain Layout" />
 
+        <Button
+            android:id="@+id/tvRecyclerAndCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Recycler and CardView" />
+
     </LinearLayout>
 </ScrollView>

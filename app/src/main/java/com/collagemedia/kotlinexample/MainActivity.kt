@@ -42,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         tvConstrainLayout.setOnClickListener {
             startActivity(intentFor<ConstrainLayoutActivity>())
         }
+
+        tvRecyclerAndCardView.setOnClickListener {
+            startActivity(intentFor<RecyclerAndCardViewActivity>())
+        }
     }
 
     internal fun supportsLollipop(code: () -> Unit) {

@@ -7,5 +7,9 @@
     <string name="name_anko_layout">Kotlin - Anko Layout</string>
     <string name="name_constrain_layout">Kotlin - Constrain Layout</string>
 
-    <string name="des">Every day there is more and more activity around Kotlin, and we want to help foster and grow the community in any way we can. Here you can find online resources, as well as offline events and talks in your area. And if you can't find one, create one. We're here to help! </string>
+    <string name="recycler_cardview">Kotlin - Recycler CardView</string>
+    <string name="des">Every day there is more and more activity around Kotlin, and we want to help foster and grow the community in any way we can. Here you can find online resources, as well as offline events and talks in your area. And if you can \'t find one, create one. We're here to help! </string>
+
+    <string name="backdrop_title">LOVE STUDENT</string>
+    <string name="backdrop_subtitle">This class top %d student</string>
 </resources>
