@@ -10,7 +10,7 @@ import android.widget.RelativeLayout
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.collagemedia.kotlinexample.R
-import com.collagemedia.kotlinexample.ViewPagerActivity
+import com.collagemedia.kotlinexample.activity.ViewPagerActivity
 import com.collagemedia.kotlinexample.model.StudentModel
 import kotlinx.android.synthetic.main.item_gridview.view.*
 import org.jetbrains.anko.intentFor

@@ -3,6 +3,7 @@ package com.collagemedia.kotlinexample
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.collagemedia.kotlinexample.activity.*
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
