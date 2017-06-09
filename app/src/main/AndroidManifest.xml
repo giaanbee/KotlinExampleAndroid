@@ -23,27 +23,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ListViewActivity"
+            android:name=".activity.ListViewActivity"
             android:label="@string/name_list" />
         <activity
-            android:name=".GridViewActivity"
+            android:name=".activity.GridViewActivity"
             android:label="@string/name_grid" />
         <activity
-            android:name=".ViewPagerActivity"
+            android:name=".activity.ViewPagerActivity"
             android:label="@string/name_viewPager" />
         <activity
-            android:name=".DataSQLiteActivity"
+            android:name=".activity.DataSQLiteActivity"
             android:label="@string/name_sqlite" />
         <activity
-            android:name=".AnkoLayoutActivity"
+            android:name=".activity.AnkoLayoutActivity"
             android:label="@string/name_anko_layout" />
         <activity
-            android:name=".ConstrainLayoutActivity"
+            android:name=".activity.ConstrainLayoutActivity"
             android:label="@string/name_constrain_layout" />
         <activity
             android:name=".activity.RecyclerAndCardViewActivity"
             android:label="@string/recycler_cardview"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

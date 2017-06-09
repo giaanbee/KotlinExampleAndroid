@@ -1,14 +1,18 @@
 package com.collagemedia.kotlinexample.activity
 
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import com.collagemedia.kotlinexample.R
+import kotlinx.android.synthetic.main.activity_constrain_layout.*
 import org.jetbrains.anko.toast
 
-class ConstrainLayoutActivity : android.support.v7.app.AppCompatActivity() {
+class ConstrainLayoutActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: android.os.Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.collagemedia.kotlinexample.R.layout.activity_constrain_layout)
+        setContentView(R.layout.activity_constrain_layout)
 
-        kotlinx.android.synthetic.main.activity_constrain_layout.btnLogin.setOnClickListener {
+        btnLogin.setOnClickListener {
             if (checkLogin()) {
                 toast("Login success")
             } else {
@@ -18,6 +22,6 @@ class ConstrainLayoutActivity : android.support.v7.app.AppCompatActivity() {
     }
 
     fun checkLogin(): Boolean {
-        return kotlinx.android.synthetic.main.activity_constrain_layout.edName.text.isNotEmpty() && kotlinx.android.synthetic.main.activity_constrain_layout.edPassword.text.isNotEmpty()
+        return edName.text.isNotEmpty() && edPassword.text.isNotEmpty()
     }
 }

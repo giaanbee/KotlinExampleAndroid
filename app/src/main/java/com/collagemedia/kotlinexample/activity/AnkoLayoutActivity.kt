@@ -1,14 +1,17 @@
 package com.collagemedia.kotlinexample.activity
 
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import com.collagemedia.kotlinexample.R
 import org.jetbrains.anko.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
 import org.jetbrains.anko.sdk25.coroutines.onSeekBarChangeListener
 
-class AnkoLayoutActivity : android.support.v7.app.AppCompatActivity() {
+class AnkoLayoutActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: android.os.Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.collagemedia.kotlinexample.R.layout.activity_anko_layout)
+        setContentView(R.layout.activity_anko_layout)
 
         verticalLayout {
             padding = dip(5)
@@ -21,18 +24,18 @@ class AnkoLayoutActivity : android.support.v7.app.AppCompatActivity() {
                 }
 
             }
-            themedButton("button with theme", theme = com.collagemedia.kotlinexample.R.style.CustomFontStyle)
+            themedButton("button with theme", theme = R.style.CustomFontStyle)
 
-            seekBar{
+            seekBar {
                 onSeekBarChangeListener {
-                    onProgressChanged{ seekbar, progress, fromuser ->
+                    onProgressChanged { seekbar, progress, fromuser ->
 
                     }
                 }
 
             }
             imageView {
-                setImageResource(com.collagemedia.kotlinexample.R.mipmap.avatar10)
+                setImageResource(R.mipmap.avatar10)
             }
         }
     }

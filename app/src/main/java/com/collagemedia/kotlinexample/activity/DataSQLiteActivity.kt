@@ -1,24 +1,36 @@
 package com.collagemedia.kotlinexample.activity
-
+import android.app.ProgressDialog
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import com.collagemedia.kotlinexample.R
+import com.collagemedia.kotlinexample.activity.ViewPagerActivity
+import com.collagemedia.kotlinexample.adapter.ListViewAdapter
 import com.collagemedia.kotlinexample.model.StudentModel
-import org.jetbrains.anko.*
+import com.collagemedia.kotlinexample.sqlite.DataOpenHelper
+import com.collagemedia.kotlinexample.util.Config
+import kotlinx.android.synthetic.main.activity_data_sqlite.*
+import kotlinx.coroutines.experimental.Deferred
+import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.coroutines.experimental.Ref
 import org.jetbrains.anko.coroutines.experimental.asReference
+import org.jetbrains.anko.coroutines.experimental.bg
 import org.jetbrains.anko.custom.async
+import org.jetbrains.anko.intentFor
+import org.jetbrains.anko.uiThread
 
-class DataSQLiteActivity : android.support.v7.app.AppCompatActivity(), org.jetbrains.anko.AnkoLogger {
-    var dataSQL: com.collagemedia.kotlinexample.sqlite.DataOpenHelper? = null
+class DataSQLiteActivity : AppCompatActivity(), AnkoLogger {
+    var dataSQL: DataOpenHelper? = null
 
-    var list: ArrayList<com.collagemedia.kotlinexample.model.StudentModel> = ArrayList()
-    var progressDialog: android.app.ProgressDialog? = null
+    var list: ArrayList<StudentModel> = ArrayList()
+    var progressDialog: ProgressDialog? = null
 
-    override fun onCreate(savedInstanceState: android.os.Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.collagemedia.kotlinexample.R.layout.activity_data_sqlite)
+        setContentView(R.layout.activity_data_sqlite)
 
-        dataSQL = com.collagemedia.kotlinexample.sqlite.DataOpenHelper.Companion.getInstance(this)
-        progressDialog = android.app.ProgressDialog(this)
-        progressDialog!!.setProgressStyle(android.app.ProgressDialog.STYLE_SPINNER)
+        dataSQL = DataOpenHelper.Companion.getInstance(this)
+        progressDialog = ProgressDialog(this)
+        progressDialog!!.setProgressStyle(ProgressDialog.STYLE_SPINNER)
         progressDialog!!.setTitle("Loading...")
 //        loadData()
 
@@ -27,15 +39,14 @@ class DataSQLiteActivity : android.support.v7.app.AppCompatActivity(), org.jetbr
     }
 
 
-
     /*--------Using Anko Coroutines --------*/
 
     //------------bg()---------------
-    fun getData(): ArrayList<com.collagemedia.kotlinexample.model.StudentModel> {
+    fun getData(): ArrayList<StudentModel> {
 //        progressDialog!!.show()
-        var data: ArrayList<com.collagemedia.kotlinexample.model.StudentModel> = ArrayList()
+        var data: ArrayList<StudentModel> = ArrayList()
         if (dataSQL!!.getCount() == 0) {
-            for (item in com.collagemedia.kotlinexample.util.Config.initData())
+            for (item in Config.initData())
                 dataSQL!!.addData(item)
         }
         data = dataSQL!!.getAllData()
@@ -45,13 +56,12 @@ class DataSQLiteActivity : android.support.v7.app.AppCompatActivity(), org.jetbr
     fun initView() {
         progressDialog!!.show()
         kotlinx.coroutines.experimental.async(kotlinx.coroutines.experimental.android.UI) {
-            val data: kotlinx.coroutines.experimental.Deferred<ArrayList<StudentModel>> = org.jetbrains.anko.coroutines.experimental.bg {
+            val data: Deferred<ArrayList<StudentModel>> = bg {
                 // Chạy trong background
                 getData()
             }
 
             // UI
-
             showData(data.await())
         }
     }
@@ -60,7 +70,7 @@ class DataSQLiteActivity : android.support.v7.app.AppCompatActivity(), org.jetbr
     fun loadAndShowData() {
         progressDialog!!.show()
         // Ref<T> uses the WeakReference under the hood
-        val ref: org.jetbrains.anko.coroutines.experimental.Ref<DataSQLiteActivity> = this.asReference()
+        val ref: Ref<DataSQLiteActivity> = this.asReference()
 
         kotlinx.coroutines.experimental.async(kotlinx.coroutines.experimental.android.UI) {
             val data = getData()
@@ -75,7 +85,7 @@ class DataSQLiteActivity : android.support.v7.app.AppCompatActivity(), org.jetbr
     private fun loadData() {
         async {
             if (dataSQL!!.getCount() == 0) {
-                for (item in com.collagemedia.kotlinexample.util.Config.initData())
+                for (item in Config.initData())
                     dataSQL!!.addData(item)
             }
             list = dataSQL!!.getAllData()
@@ -86,10 +96,10 @@ class DataSQLiteActivity : android.support.v7.app.AppCompatActivity(), org.jetbr
         }
     }
 
-    private fun showData(data: ArrayList<com.collagemedia.kotlinexample.model.StudentModel>) {
+    private fun showData(data: ArrayList<StudentModel>) {
         progressDialog!!.dismiss()
-        kotlinx.android.synthetic.main.activity_data_sqlite.lvData.adapter = com.collagemedia.kotlinexample.adapter.ListViewAdapter(this, R.layout.item_listview, data)
-        kotlinx.android.synthetic.main.activity_data_sqlite.lvData.setOnItemClickListener { _, _, position, _ ->
+        lvData.adapter = ListViewAdapter(this, R.layout.item_listview, data)
+        lvData.setOnItemClickListener { _, _, position, _ ->
             startActivity(intentFor<ViewPagerActivity>("pos" to position))
         }
     }

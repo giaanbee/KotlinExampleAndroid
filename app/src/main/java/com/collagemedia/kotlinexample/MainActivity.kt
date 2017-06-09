@@ -1,14 +1,15 @@
 package com.collagemedia.kotlinexample
 
 import android.os.Build
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import com.collagemedia.kotlinexample.activity.*
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), AnkoLogger {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         tvRecyclerAndCardView.setOnClickListener {
             startActivity(intentFor<RecyclerAndCardViewActivity>())
         }
+
     }
 
     internal fun supportsLollipop(code: () -> Unit) {
@@ -58,4 +60,5 @@ class MainActivity : AppCompatActivity() {
     fun showToast() {
         toast("Test Xem nào")
     }
+
 }

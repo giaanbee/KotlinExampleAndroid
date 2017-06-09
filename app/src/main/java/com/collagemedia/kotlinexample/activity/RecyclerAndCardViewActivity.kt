@@ -9,6 +9,8 @@ import com.collagemedia.kotlinexample.R
 import com.collagemedia.kotlinexample.adapter.RecyclerCardViewAdapter
 import com.collagemedia.kotlinexample.base.BaseAppcombatActivity
 import com.collagemedia.kotlinexample.util.Config
+import kotlinx.android.synthetic.main.activity_recycler_and_card_view.*
+import kotlinx.android.synthetic.main.content_recycler_cardview_layout.*
 
 
 class RecyclerAndCardViewActivity : BaseAppcombatActivity() {
@@ -16,22 +18,22 @@ class RecyclerAndCardViewActivity : BaseAppcombatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler_and_card_view)
-        setSupportActionBar(kotlinx.android.synthetic.main.activity_recycler_and_card_view.toolbar)
+        setSupportActionBar(toolbar)
 
         initCollapsingToolbar()
 
-        kotlinx.android.synthetic.main.activity_recycler_and_card_view.tvCountStudent.text = String.format(getString(R.string.backdrop_subtitle), Config.initData().size)
+        tvCountStudent.text = String.format(getString(R.string.backdrop_subtitle), Config.initData().size)
         val adapter = RecyclerCardViewAdapter(this, Config.initData())
 
         val mLayoutManager = GridLayoutManager(this, 2)
 
-        kotlinx.android.synthetic.main.content_recycler_cardview_layout.recycler_view.layoutManager = mLayoutManager
+        recycler_view.layoutManager = mLayoutManager
 
-        kotlinx.android.synthetic.main.content_recycler_cardview_layout.recycler_view.addItemDecoration(GridSpacingItemDecoration(2, dpToPx(10), true))
-        kotlinx.android.synthetic.main.content_recycler_cardview_layout.recycler_view.itemAnimator = DefaultItemAnimator()
-        kotlinx.android.synthetic.main.content_recycler_cardview_layout.recycler_view.adapter = adapter
+        recycler_view.addItemDecoration(GridSpacingItemDecoration(2, dpToPx(10), true))
+        recycler_view.itemAnimator = DefaultItemAnimator()
+        recycler_view.adapter = adapter
 
-        Glide.with(this).load(R.drawable.cover).into(kotlinx.android.synthetic.main.activity_recycler_and_card_view.backdrop)
+        Glide.with(this).load(R.drawable.cover).into(backdrop)
     }
 
     /**
@@ -39,11 +41,11 @@ class RecyclerAndCardViewActivity : BaseAppcombatActivity() {
      * Will show and hide the toolbar title on scroll
      */
     fun initCollapsingToolbar() {
-        kotlinx.android.synthetic.main.activity_recycler_and_card_view.collapsingToolbar.title = " "
-        kotlinx.android.synthetic.main.activity_recycler_and_card_view.appbarMain.setExpanded(true)
+        collapsingToolbar.title = " "
+        appbarMain.setExpanded(true)
 
         // hiding & showing the title when toolbar expanded & collapsed
-        kotlinx.android.synthetic.main.activity_recycler_and_card_view.appbarMain.addOnOffsetChangedListener(object : AppBarLayout.OnOffsetChangedListener {
+        appbarMain.addOnOffsetChangedListener(object : AppBarLayout.OnOffsetChangedListener {
             internal var isShow = false
             internal var scrollRange = -1
 
@@ -52,10 +54,10 @@ class RecyclerAndCardViewActivity : BaseAppcombatActivity() {
                     scrollRange = appBarLayout.totalScrollRange
                 }
                 if (scrollRange + verticalOffset == 0) {
-                    kotlinx.android.synthetic.main.activity_recycler_and_card_view.collapsingToolbar.title = getString(R.string.recycler_cardview)
+                    collapsingToolbar.title = getString(R.string.recycler_cardview)
                     isShow = true
                 } else if (isShow) {
-                    kotlinx.android.synthetic.main.activity_recycler_and_card_view.collapsingToolbar.title = " "
+                    collapsingToolbar.title = " "
                     isShow = false
                 }
             }

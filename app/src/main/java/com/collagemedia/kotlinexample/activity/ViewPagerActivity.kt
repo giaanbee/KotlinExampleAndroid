@@ -1,23 +1,29 @@
 package com.collagemedia.kotlinexample.activity
 
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import com.collagemedia.kotlinexample.R
+import com.collagemedia.kotlinexample.adapter.ViewPagerAdapter
 import com.collagemedia.kotlinexample.util.Config
+import kotlinx.android.synthetic.main.activity_view_pager.*
+import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.error
+import org.jetbrains.anko.support.v4.onPageChangeListener
 
-class ViewPagerActivity : android.support.v7.app.AppCompatActivity(), org.jetbrains.anko.AnkoLogger {
+class ViewPagerActivity : AppCompatActivity(), AnkoLogger {
 
-    override fun onCreate(savedInstanceState: android.os.Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.collagemedia.kotlinexample.R.layout.activity_view_pager)
+        setContentView(R.layout.activity_view_pager)
 
-        val adapterViewpager = com.collagemedia.kotlinexample.adapter.ViewPagerAdapter(this, R.layout.item_pager, Config.initData())
-        kotlinx.android.synthetic.main.activity_view_pager.viewPager.adapter = adapterViewpager
+        val adapterViewpager = ViewPagerAdapter(this, R.layout.item_pager, Config.initData())
+        viewPager.adapter = adapterViewpager
 
         changeTextCountPager(1, adapterViewpager.count)
-        kotlinx.android.synthetic.main.activity_view_pager.viewPager.onPageChangeListener {
+        viewPager.onPageChangeListener {
             onPageSelected {
                 error { "Page Changing" }
-                changeTextCountPager(kotlinx.android.synthetic.main.activity_view_pager.viewPager.currentItem, adapterViewpager.count)
+                changeTextCountPager(viewPager.currentItem, adapterViewpager.count)
             }
         }
 
@@ -25,11 +31,11 @@ class ViewPagerActivity : android.support.v7.app.AppCompatActivity(), org.jetbra
         if (intent != null) {
             val pos = intent.getIntExtra("pos", 0)
             changeTextCountPager(pos, adapterViewpager.count)
-            kotlinx.android.synthetic.main.activity_view_pager.viewPager.currentItem = pos
+            viewPager.currentItem = pos
         }
     }
 
     fun changeTextCountPager(pos: Int, count: Int) {
-        kotlinx.android.synthetic.main.activity_view_pager.tvCountPager.text = String.format("%2d / %2d", pos + 1, count)
+        tvCountPager.text = String.format("%2d / %2d", pos + 1, count)
     }
 }
