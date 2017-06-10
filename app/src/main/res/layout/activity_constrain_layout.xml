@@ -63,6 +63,15 @@
                 app:layout_constraintStart_toEndOf="@+id/tvName"
                 app:layout_constraintTop_toBottomOf="@+id/edName" />
 
+            <ProgressBar
+                android:id="@+id/progressbar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progressDrawable="@drawable/bg_progressbar"
+                app:layout_constraintTop_toBottomOf="@id/edPassword" />
+
             <TextView
                 android:id="@+id/tvDes"
                 android:layout_width="match_parent"
@@ -70,10 +79,10 @@
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
                 android:text="@string/des"
-                app:layout_constraintTop_toBottomOf="@id/edPassword" />
+                app:layout_constraintTop_toBottomOf="@id/progressbar" />
 
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnStart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
@@ -83,7 +92,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tvDes" />
 
             <Button
-                android:id="@+id/btnRegister"
+                android:id="@+id/btnStop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
@@ -101,7 +110,17 @@
                 android:text="Button"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+                app:layout_constraintTop_toBottomOf="@+id/btnStop" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imgBanner" />
         </android.support.constraint.ConstraintLayout>
 
 
