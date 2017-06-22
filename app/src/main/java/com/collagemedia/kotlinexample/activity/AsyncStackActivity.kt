@@ -1,5 +1,6 @@
 package com.collagemedia.kotlinexample.activity
 
+import android.app.ProgressDialog
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.AsyncTask
@@ -12,11 +13,11 @@ import java.io.InputStream
 import java.net.URL
 
 public class AsyncStackActivity : AppCompatActivity() {
-    public var imageLoad: ImageView? = null
+    var imageLoad: ImageView? = null
+    var progress: ProgressDialog? = null
 
 
-
-//    private val urlImage = "http://geeksnation.org/wp-content/uploads/2016/10/Most-Beautiful-Girl.jpg"
+    //    private val urlImage = "http://geeksnation.org/wp-content/uploads/2016/10/Most-Beautiful-Girl.jpg"
     private val urlImage = "https://scontent.fhan3-1.fna.fbcdn.net/v/t1.0-9/19366489_1503266686402676_2571488945428233476_n.jpg?oh=f7bee4bbe4578267f28edf8a77072b4b&oe=59C56600"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,12 +26,22 @@ public class AsyncStackActivity : AppCompatActivity() {
 
         imageLoad = imgLoad
 
-        LoadImage(imageLoad!!).execute(urlImage)
+        btnLoadImage.setOnClickListener {
+            LoadImage().execute(urlImage)
+        }
 
+        progress = ProgressDialog(this)
+        progress!!.setTitle("Load Image")
+        progress!!.setCancelable(false)
     }
 
-    class LoadImage(imageLoad: ImageView) : AsyncTask<String, Void, Bitmap>() {
-        val imageNew = imageLoad
+    inner class LoadImage() : AsyncTask<String, Void, Bitmap>() {
+
+        override fun onPreExecute() {
+            super.onPreExecute()
+            progress!!.show()
+            progress!!.setMessage("Loading")
+        }
 
 
         override fun doInBackground(vararg params: String?): Bitmap {
@@ -45,7 +56,8 @@ public class AsyncStackActivity : AppCompatActivity() {
 
         override fun onPostExecute(result: Bitmap?) {
             super.onPostExecute(result)
-            imageNew.setImageBitmap(result)
+            imageLoad!!.setImageBitmap(result)
+            progress!!.dismiss()
         }
 
     }
