@@ -66,5 +66,12 @@
             android:gravity="center"
             android:text="Recycler and CardView" />
 
+        <Button
+            android:id="@+id/tvAsyncTaskDemo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Async Stack " />
+
     </LinearLayout>
 </ScrollView>

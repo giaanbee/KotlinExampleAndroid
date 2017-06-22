@@ -49,6 +49,10 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
             startActivity(intentFor<RecyclerAndCardViewActivity>())
         }
 
+        tvAsyncTaskDemo.setOnClickListener {
+            startActivity(intentFor<AsyncStackActivity>())
+        }
+
     }
 
     internal fun supportsLollipop(code: () -> Unit) {
