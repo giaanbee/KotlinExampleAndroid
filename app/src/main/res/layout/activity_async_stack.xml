@@ -7,6 +7,11 @@
     android:layout_height="match_parent"
     tools:context="com.collagemedia.kotlinexample.activity.AsyncStackActivity">
 
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
     <Button
         android:id="@+id/btnLoadImage"
         android:layout_width="match_parent"
