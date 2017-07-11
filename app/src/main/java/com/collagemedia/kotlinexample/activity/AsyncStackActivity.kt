@@ -14,6 +14,7 @@ import android.widget.ImageView
 import com.collagemedia.kotlinexample.R
 import kotlinx.android.synthetic.main.activity_async_stack.*
 import java.io.InputStream
+import java.net.HttpURLConnection
 import java.net.URL
 
 
@@ -23,7 +24,6 @@ public class AsyncStackActivity : AppCompatActivity() {
     var progress: ProgressDialog? = null
 
     private var urlMain = ""
-
     private val urlImage = "http://geeksnation.org/wp-content/uploads/2016/10/Most-Beautiful-Girl.jpg"
     private val urlImage1 = "https://scontent.fhan3-1.fna.fbcdn.net/v/t1.0-9/19366489_1503266686402676_2571488945428233476_n.jpg?oh=f7bee4bbe4578267f28edf8a77072b4b&oe=59C56600"
 
@@ -72,12 +72,13 @@ public class AsyncStackActivity : AppCompatActivity() {
             progress!!.setMessage("Loading")
         }
 
-
         override fun doInBackground(vararg params: String?): Bitmap {
-
             var bitmap: Bitmap
             val urlImage = URL(params[0])
-            val input: InputStream = urlImage.openConnection().getInputStream();
+            val connection: HttpURLConnection = urlImage.openConnection() as HttpURLConnection;
+            connection.connectTimeout = 15000
+            connection.readTimeout = 15000
+            val input: InputStream = connection.inputStream;
             bitmap = BitmapFactory.decodeStream(input);
 
             return bitmap
@@ -85,9 +86,10 @@ public class AsyncStackActivity : AppCompatActivity() {
 
         override fun onPostExecute(result: Bitmap?) {
             super.onPostExecute(result)
-            imageLoad!!.setImageBitmap(result)
+            if (result != null) {
+                imageLoad!!.setImageBitmap(result)
+            }
             progress!!.dismiss()
         }
-
     }
 }
