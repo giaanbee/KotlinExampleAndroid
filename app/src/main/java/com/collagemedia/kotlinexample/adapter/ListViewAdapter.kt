@@ -42,7 +42,7 @@ open class ListViewAdapter(context: Context, resource: Int, data: ArrayList<Stud
 
             retView?.tag = holder
         } else {
-            holder = convertView!!.tag as ViewHolder
+            holder = convertView?.tag as ViewHolder
             retView = convertView
         }
         val student = iData[position]

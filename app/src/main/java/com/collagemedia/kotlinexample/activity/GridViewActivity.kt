@@ -32,10 +32,10 @@ class GridViewActivity : BaseAppcombatActivity(), AnkoLogger {
 
         lstPhoto = Config.initData()
         val col = 3
-        val pH = Config.SCREENWIDTH / col - (dpToPx(2) * 1);
+        val pH = Config.SCREENWIDTH / col - (dpToPx(2) * (col + 1))
         val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(this, col) as RecyclerView.LayoutManager
         rcGallery.layoutManager = layoutManager
-        rcGallery.addItemDecoration(GridSpacingItemDecoration(col, dpToPx(5), true))
+        rcGallery.addItemDecoration(GridSpacingItemDecoration(col, dpToPx(2), true))
         rcGallery.itemAnimator = DefaultItemAnimator()
         rcGallery.adapter = GridViewAdapter(this, lstPhoto!!, pH)
     }

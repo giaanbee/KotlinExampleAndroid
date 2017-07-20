@@ -3,13 +3,13 @@ import android.app.ProgressDialog
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.collagemedia.kotlinexample.R
-import com.collagemedia.kotlinexample.activity.ViewPagerActivity
 import com.collagemedia.kotlinexample.adapter.ListViewAdapter
 import com.collagemedia.kotlinexample.model.StudentModel
 import com.collagemedia.kotlinexample.sqlite.DataOpenHelper
 import com.collagemedia.kotlinexample.util.Config
 import kotlinx.android.synthetic.main.activity_data_sqlite.*
 import kotlinx.coroutines.experimental.Deferred
+import kotlinx.coroutines.experimental.android.UI
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.coroutines.experimental.Ref
 import org.jetbrains.anko.coroutines.experimental.asReference
@@ -55,7 +55,7 @@ class DataSQLiteActivity : AppCompatActivity(), AnkoLogger {
 
     fun initView() {
         progressDialog!!.show()
-        kotlinx.coroutines.experimental.async(kotlinx.coroutines.experimental.android.UI) {
+        kotlinx.coroutines.experimental.async(UI) {
             val data: Deferred<ArrayList<StudentModel>> = bg {
                 // Chạy trong background
                 getData()
@@ -72,7 +72,7 @@ class DataSQLiteActivity : AppCompatActivity(), AnkoLogger {
         // Ref<T> uses the WeakReference under the hood
         val ref: Ref<DataSQLiteActivity> = this.asReference()
 
-        kotlinx.coroutines.experimental.async(kotlinx.coroutines.experimental.android.UI) {
+        kotlinx.coroutines.experimental.async(UI) {
             val data = getData()
 
             // Use ref() instead of this@MyActivity
